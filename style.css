@@ -1,0 +1,845 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font Setup */
+body {
+    font-family: 'Karla', 'Montserrat', 'Kodchasan', 'Kanit', sans-serif;
+    background-color: #071525;
+    color: white;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    font-family: 'Century Gothic';
+    font-weight: 100;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 60px;
+}
+.logo_txt {
+    font-size: 24px;
+    padding-top: 10px;
+}
+
+.nav-options {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-options div {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.nav-options div:hover {
+    color: wheat;
+}
+
+.nav-contact {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.nav-contact p {
+    color: gray;
+}
+
+.search i {
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100%;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.04); /* more transparent */
+    backdrop-filter: blur(20px); /* increased blur */
+    -webkit-backdrop-filter: blur(20px); /* for Safari support */
+    color: white;
+    z-index: 999;
+    transition: right 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+}
+
+/* ✅ Show when toggled */
+.side-menu.show {
+    right: 0;
+}
+
+/* 🌟 Menu Items */
+.side-menu div {
+    padding: 1rem 0;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+    transition: color 0.3s;
+    font-family: 'Century Gothic';
+}
+
+.side-menu div:hover {
+    color: wheat;
+}
+.close-btn {
+    text-align: right;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.close-btn i {
+    font-size: 24px;
+    color: white;
+}
+
+     
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    background-image: url("images/landing.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 130vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Adjust opacity as needed */
+    z-index: -1; /* Put it behind the content but above the image */
+}
+
+.landingPage h1 {
+    font-size: 5.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    line-height: 1.1;
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+.landingPage h5 {
+    font-size: 2.5rem;
+    color: wheat;
+    font-family: "Brush Script MT", cursive;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+}
+
+.landingPage {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.abt_btn {
+    padding: 1rem 2rem;
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.disc {
+    
+    background-color: wheat;
+}
+
+.book {
+    background-color: white;
+}
+
+.disc:hover {
+    background-color: rgb(198, 167, 111);
+}
+
+.book:hover {
+    background-color: rgb(180, 180, 180);
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.service_opt {
+    max-width: 300px;
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service_opt:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.ser i {
+    font-size: 40px;
+    color: wheat;
+    padding-bottom: 30px;
+}
+
+.service_opt h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: wheat;
+}
+
+.service_opt p {
+    font-family: 'Century Gothic';
+    font-size: 13px;
+    font-weight: 100;
+}
+
+/* Line section */
+.line-wrapper {
+    margin: 20px auto;
+}
+
+.line-with-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.line-with-logo i {
+    font-size: 13px;
+    color: wheat;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background-color: gray;
+}
+
+/* About Section */
+.about {
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.about h1 {
+    color: wheat;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    line-height: 1.2;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.about h4 {
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    font-weight: 100;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about p {
+    font-family: "Brush Script MT", cursive;
+    font-size: 1.3rem;
+}
+
+/* Why icons */
+.why {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-family: "Brush Script MT", cursive;
+    padding-bottom: 20px;
+    
+}
+
+.why i {
+    color: wheat;
+    font-size: 10px;
+}
+
+.why p {
+    font-size: 1.3rem;
+}
+
+/* Footer */
+.menu {
+    display: flex;
+    gap: 50px;
+    margin: 50px 0;
+    flex-direction: column ;
+    align-items: center;
+    text-align: center;
+}
+.menu h1 {
+    color: wheat;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    line-height: 1.2;
+    font-family: 'Times New Roman', Times, serif;
+}
+.grid {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+    "I1 I1 I2 I3" 
+    "I1 I1 I2 I7"
+    "I4 I5 I6 I7";
+}
+.grid_items {
+    border-radius: 10px;
+    transition: 0.3s ease-in;
+    height: 100%;
+    width: 100%; 
+}
+.grid_items:hover {
+    transform: scale(1.01);
+}
+.item_1 {
+    grid-area: I1;
+}
+.item_2 {
+    grid-area: I2;
+}
+.item_3 {
+    grid-area: I3;
+}
+.item_4 {
+    grid-area: I4;
+}
+.item_5 {
+    grid-area: I5;
+}
+.item_6 {
+    grid-area: I6;
+}
+.item_7 {
+    grid-area: I7;
+}
+
+
+
+footer {
+    display: flex;
+    padding: 80px 40px;
+    justify-content: space-between;
+    background-color: #030a12; /* Darker background for better contrast */
+    color: #e0e0e0; /* Soft gray text */
+    font-family: 'Arial', sans-serif; /* Change font for a modern feel */
+}
+.footer_logo img{
+    height: 200px;
+}
+
+footer h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: wheat; /* A bright yellow-golden color for headings */
+    margin-bottom: 20px;
+}
+
+footer h3 {
+    font-size: 16px;
+    font-weight: lighter;
+    margin-top: 10px;
+}
+
+footer ul {
+    font-size: 14px;
+    list-style-type: none;
+    padding: 0;
+    color: #b0b0b0; /* Lighter gray for list items */
+}
+
+footer ul li {
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+footer ul li:hover {
+    color: wheat; /* Bright yellow on hover for list items */
+}
+
+input {
+    height: 35px;
+    width: 260px;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+
+input::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+.footer_div4 h3 {
+    margin-top: 10px;
+}
+
+i:hover {
+    transform: scale(1.2);
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.icon i {
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+    color: #b0b0b0; /* Initial icon color */
+}
+
+.icon i:hover {
+    transform: scale(1.2);
+    color: wheat; /* Icon color change on hover */
+}
+
+/* Fade-in effect for the entire footer */
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+
+
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+/* Default styles */
+.menu h1 {
+    font-size: 2.5rem;
+}
+
+.grid {
+    grid-template-areas:
+        "I1 I1 I2 I3"
+        "I4 I5 I6 I7";
+}
+
+.grid_items {
+    height: 300px;
+}
+
+footer {
+    padding: 80px 50px;
+    justify-content: space-between;
+}
+
+footer h4 {
+    font-size: 18px;
+}
+
+input {
+    width: 260px;
+}
+
+/* Tablet Styles (max-width: 992px) */
+@media (max-width: 992px) {
+    .nav-options,
+    .nav-contact {
+        display: none;
+    }
+
+    .service_opt .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .grid {
+        grid-template-areas:
+            "I1 I1"
+            "I2 I3"
+            "I4 I5"
+            "I6 I7";
+    }
+
+    .menu h1 {
+        font-size: 1.8rem;
+    }
+
+    .grid_items {
+        height: 250px; /* Adjust for smaller screens */
+    }
+
+    .mobile-menu {
+        display: block;
+        margin-left: auto;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .about h1 {
+        font-size: 2rem;
+    }
+
+    .about h4 {
+        font-size: 13px;
+    }
+
+    .menu {
+        margin: 30px 0;
+    }
+
+    .menu h1 {
+        font-size: 2rem;
+    }
+
+    footer {
+        padding: 60px 30px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .footer_logo {
+        margin-bottom: 20px;
+    }
+
+    footer .footer_div2,
+    footer .footer_div3,
+    footer .footer_div4 {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    footer .footer_div2 ul,
+    footer .footer_div3 ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer h4 {
+        font-size: 20px;
+    }
+
+    input {
+        width: 220px;
+    }
+}
+
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Navbar Adjustments */
+    .nav-options,
+    .nav-contact {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+        margin-left: auto;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    /* Hero Section */
+    .landingPage h1 {
+        font-size: 2.5rem;
+    }
+
+    .landingPage h5 {
+        font-size: 1.2rem;
+    }
+
+    /* About Section */
+    .services {
+        gap: 1.5rem;
+    }
+
+    .service_opt {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+    .service_opt .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .about h1 {
+        font-size: 1.8rem;
+    }
+
+    .logo img{
+        height: 50px;
+        padding-left: 5px;
+    }
+
+    .logo_txt {
+        font-size: 14px;
+    }
+
+    .menu {
+        margin: 20px 0;
+    }
+
+    .grid {
+        grid-template-areas:
+            "I1 I1"
+            "I2 I3"
+            "I4 I5"
+            "I6 I7";
+    }
+
+    .menu h1 {
+        font-size: 1.8rem;
+    }
+
+    .grid_items {
+        height: 250px; /* Adjust for smaller screens */
+    }
+
+    footer {
+        padding: 50px 20px;
+    }
+
+    footer .footer_logo img {
+        width: 150px; /* Adjust logo size for small screens */
+    }
+
+    footer .footer_div2,
+    footer .footer_div3,
+    footer .footer_div4 {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    footer h4 {
+        font-size: 18px;
+    }
+
+    footer ul li {
+        font-size: 12px;
+    }
+
+    input {
+        width: 200px;
+    }
+
+    .icons {
+        gap: 1rem;
+    }
+}
+
+/* Small Mobile Styles (max-width: 480px) */
+@media (max-width: 480px) {
+    .about {
+        padding: 60px 10px;
+    }
+
+    .about h1 {
+        font-size: 1.5rem;
+    }
+
+    .about h4 {
+        font-size: 12px;
+    }
+
+    .line-with-logo {
+        gap: 10px;
+    }
+
+    .logo img, p {
+        height: 45px;
+        padding-left: 2px;
+    }
+
+    .logo_txt {
+        font-size: 15px;
+    }
+
+    .menu {
+        margin: 15px 0;
+    }
+
+    .grid {
+        grid-template-areas:
+            "I1"
+            "I2"
+            "I3"
+            "I4"
+            "I5"
+            "I6"
+            "I7";
+    }
+
+    .grid_items {
+        height: 200px; /* Adjust for very small screens */
+    }
+
+    .menu h1 {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        padding: 40px 15px;
+    }
+
+    footer .footer_logo img {
+        width: 120px; /* Adjust logo size further for very small screens */
+    }
+
+    footer .footer_div2,
+    footer .footer_div3,
+    footer .footer_div4 {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    footer h4 {
+        font-size: 16px;
+    }
+
+    footer ul li {
+        font-size: 11px;
+    }
+
+    input {
+        width: 180px;
+    }
+
+    .icons {
+        gap: 0.5rem;
+    }
+}
+
+
+

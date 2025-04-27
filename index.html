@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Velare Restaurant</title>
+</head>
+<body>
+
+    <section class="hero fade-in">
+        <header class="fade-in">
+            <nav>
+                <div class="navbar">
+                    <!-- ✅ Logo on left -->
+                    <div class="logo">
+                        <img src="images/logo.png" alt="Logo" />
+                        <p class="logo_txt">Velaré</p>
+                    </div>
+            
+                    <!-- ✅ Hamburger menu on right -->
+                    <div class="mobile-menu" onclick="toggleMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+            
+                    <!-- ✅ Navigation options -->
+                    <div class="nav-options">
+                        <div class="home">Home</div>
+                        <div class="About">About</div>
+                        <div class="serv">Services</div>
+                        <div class="blog">Blogs</div>
+                        <div class="contact">Contact us</div>
+                    </div>
+            
+                    <!-- ✅ Contact section -->
+                    <div class="nav-contact">
+                        <div class="contact_no">+92 . 322 . 0000000</div>
+                        <p> | </p>
+                        <div class="search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="side-menu">
+                <div class="close-btn" onclick="closeMenu()">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="home">Home</div>
+                <div class="About">About</div>
+                <div class="serv">Services</div>
+                <div class="blog">Blogs</div>
+                <div class="contact">Contact us</div>
+                <div class="contact_No">+92 . 322 . 0000000</div>
+            </div>
+            
+                
+        </header>
+        <div class="landingPage">
+            <h5>Welcome to our restaurant</h5>
+            <h1>TASTE ROYALE <br> CUISINE</h1>
+            <div class="buttons">
+                <button class="abt_btn disc">
+                    Discover Menu
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+                <button class="abt_btn book">
+                    Book a table
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="about_section">
+        <div class="container">
+            <div class="services fade-in">
+                <div class="service_opt">
+                    <div class="ser">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h3>FRESH PICKS</h3>
+                    <p>Handpicked ingredients, fresh flavors in every bite.</p>
+                </div>
+                <div class="service_opt">
+                    <div class="ser">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h3>QUICK ASSIST</h3>
+                    <p>Fast, friendly service whenever you need us.</p>
+                </div>
+                <div class="service_opt">
+                    <div class="ser">
+                        <i class="fa-solid fa-user-clock"></i>
+                    </div>
+                    <h3>ON-TIME</h3>
+                    <p>Reliable delivery that’s always right on time.</p>
+                </div>
+            </div>
+    
+            <div class="line-wrapper">
+                <div class="line-with-logo">
+                    <div class="line"></div>
+                    <i class="fa-solid fa-diamond"></i>
+                    <div class="line"></div>
+                </div>
+            </div>
+    
+            <div class="about fade-in">
+                <div class="why">
+                    <i class="fa-solid fa-circle"></i>
+                    <p>Why choose us</p>
+                    <i class="fa-solid fa-circle"></i>
+                </div>
+                <h1>SEASONAL AND DELICIOUS <br> FOOD MENUS</h1>
+                <h4>
+                    At Velaré, we redefine fine dining with a harmonious blend of gourmet cuisine, sophisticated ambiance, and personalized service. From meticulously crafted seasonal menus to an elegant setting that evokes warmth and luxury, every detail is designed to deliver an unforgettable culinary journey. Whether it’s an intimate dinner or a celebratory occasion, Velaré promises a five-star experience that delights every sense.
+                </h4>
+            </div>
+            <div class="line-wrapper">
+                <div class="line-with-logo">
+                    <div class="line"></div>
+                    <i class="fa-solid fa-diamond"></i>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="menu">
+        <div>
+            <div class="why">
+                <i class="fa-solid fa-circle"></i>
+                <p>Our Menu</p>
+                <i class="fa-solid fa-circle"></i>
+            </div>
+            <h1>Explore Our Menu</h1>
+        </div>
+        <div class="grid">
+            <div class="item_1">
+                <img class="grid_items" src="images/grid_image1.png" alt="img_1">
+            </div>
+            <div class="item_2">
+                <img class="grid_items" src="images/grid_image2.png" alt="img_2">
+
+            </div>
+            <div class="item_3">
+                <img class="grid_items" src="images/grid_image3.png" alt="img_3">
+
+            </div>
+            <div class="item_4">
+                <img class="grid_items" src="images/grid_image4.png" alt="img_4">
+
+            </div>
+            <div class="item_5">
+                <img class="grid_items" src="images/grid_image5.png" alt="img_5">
+
+            </div>
+            <div class="item_6">
+                <img class="grid_items" src="images/grid_image6.png" alt="img_6">
+
+            </div>
+            <div class="item_7">
+                <img class="grid_items" src="images/grid_image7.png" alt="img_7">
+
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="fade-in">
+        <div class="footer_logo">
+            <img src="images/logo.png" alt="logo">
+        </div>
+        <div class="footer_div2">
+            <h4 class="footer-heading">Explore More</h4>
+            <ul>
+                <li>Track Your Order</li>
+                <li>Place a New Order</li>
+                <li>Contact Our Team</li>
+                <li>News & Updates</li>
+            </ul>
+        </div>
+        <div class="footer_div3">
+            <h4 class="footer-heading">Support</h4>
+            <ul>
+                <li>Who We Are</li>
+                <li>Privacy Policy</li>
+                <li>Terms of Service</li>
+            </ul>
+        </div>
+        <div class="footer_div4">
+            <h4 class="footer-heading">Join Our Newsletter</h4>
+            <input type="text" placeholder="Stay updated, subscribe now...">
+            <h4 class="footer-heading">Follow Us</h4>
+            <div class="icons">
+                <div class="icon">
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-reddit"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+<script src="main.js"></script>
+</html>
